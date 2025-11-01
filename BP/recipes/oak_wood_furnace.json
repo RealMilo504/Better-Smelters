@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "better_smelters:oak_wood_furnace"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"W": {
+				"item": "planks"
+			},
+			"L": {
+				"item": "log"
+			}
+		},
+		"pattern": [
+			"WWW",
+			"W W",
+			"WLW"
+		],
+		"result": {
+			"item": "better_smelters:oak_wood_furnace"
+		},
+		"unlock": [
+			{
+				"item": "planks"
+			}
+		]
+	}
+}

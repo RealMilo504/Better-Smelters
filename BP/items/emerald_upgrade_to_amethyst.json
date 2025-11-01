@@ -1,0 +1,14 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "better_smelters:emerald_upgrade_to_amethyst",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "better_smelters_emerald_upgrade_to_amethyst"
+		}
+	}
+}

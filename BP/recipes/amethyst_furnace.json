@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "better_smelters:amethyst_furnace"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"M": {
+				"item": "amethyst_shard"
+			},
+			"B": {
+				"item": "amethyst_block"
+			},
+			"F": {
+				"item": "better_smelters:emerald_furnace"
+			}
+		},
+		"pattern": [
+			"MMM",
+			"MFM",
+			"MBM"
+		],
+		"result": {
+			"item": "better_smelters:amethyst_furnace"
+		},
+		"unlock": [
+			{
+				"item": "amethyst_shard"
+			},
+			{
+				"item": "better_smelters:emerald_furnace"
+			}
+		]
+	}
+}

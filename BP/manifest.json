@@ -1,0 +1,63 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Dorios Studios"
+		]
+	},
+	"header": {
+		"name": "Better Smelters",
+		"description": "1.2.3 §6Dorios Studios",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "3c4d1777-6e8b-4cbe-a2fc-b8ef2e351f9d",
+		"version": [
+			1,
+			2,
+			3
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "01f9ae75-dda4-4a75-b2da-85b41b856982",
+			"version": [
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "240e3e69-313f-41b6-aaef-ddcc05aadfba",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "be207038-b363-47c0-af9f-f400e928db8a",
+			"version": [
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.18.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0"
+		}
+	]
+}

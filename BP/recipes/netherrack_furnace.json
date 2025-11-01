@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "better_smelters:netherrack_furnace"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"M": {
+				"item": "minecraft:netherrack"
+			},
+			"F": {
+				"item": "furnace"
+			}
+		},
+		"pattern": [
+			"MMM",
+			"MFM",
+			"MMM"
+		],
+		"result": {
+			"item": "better_smelters:netherrack_furnace"
+		},
+		"unlock": [
+			{
+				"item": "netherrack"
+			},
+			{
+				"item": "furnace"
+			}
+		]
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "better_smelters:netherite_furnacev2"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"M": {
+				"item": "netherite_scrap"
+			},
+			"B": {
+				"item": "netherite_ingot"
+			},
+			"F": {
+				"item": "better_smelters:amethyst_furnace"
+			}
+		},
+		"pattern": [
+			"MMM",
+			"MFM",
+			"MBM"
+		],
+		"result": {
+			"item": "better_smelters:netherite_furnace"
+		},
+		"unlock": [
+			{
+				"item": "netherite_scrap"
+			},
+			{
+				"item": "better_smelters:amethyst_furnace"
+			}
+		]
+	}
+}

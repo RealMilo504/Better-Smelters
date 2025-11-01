@@ -1,0 +1,80 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Better Smelters",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"better_smelters_copper_furnace_off": {
+			"textures": "textures/blocks/Copper_furnace"
+		},
+		"better_smelters_copper_furnace_on": {
+			"textures": "textures/blocks/Copper_furnace_on"
+		},
+		"better_smelters_diamond_furnace_off": {
+			"textures": "textures/blocks/Diamond_furnace"
+		},
+		"better_smelters_diamond_furnace_on": {
+			"textures": "textures/blocks/Diamond_furnace_on"
+		},
+		"better_smelters_emerald_furnace_off": {
+			"textures": "textures/blocks/Emerald_furnace"
+		},
+		"better_smelters_emerald_furnace_on": {
+			"textures": "textures/blocks/Emerald_furnace_on"
+		},
+		"better_smelters_gold_furnace_off": {
+			"textures": "textures/blocks/Gold_furnace"
+		},
+		"better_smelters_gold_furnace_on": {
+			"textures": "textures/blocks/Gold_furnace_on"
+		},
+		"better_smelters_iron_furnace_off": {
+			"textures": "textures/blocks/Iron_furnace"
+		},
+		"better_smelters_iron_furnace_on": {
+			"textures": "textures/blocks/Iron_furnace_on"
+		},
+		"better_smelters_netherite_furnace_off": {
+			"textures": "textures/blocks/Netherite_furnace"
+		},
+		"better_smelters_netherite_furnace_on": {
+			"textures": "textures/blocks/Netherite_furnace_on"
+		},
+		"better_smelters_obsidian_furnace_off": {
+			"textures": "textures/blocks/Obsidian_furnace"
+		},
+		"better_smelters_obsidian_furnace_on": {
+			"textures": "textures/blocks/Obsidian_furnace_on"
+		},
+		"better_smelters_blaze_furnace_off": {
+			"textures": "textures/blocks/Blaze_furnace"
+		},
+		"better_smelters_blaze_furnace_on": {
+			"textures": "textures/blocks/Blaze_furnace_on"
+		},
+		"better_smelters_amethyst_furnace_off": {
+			"textures": "textures/blocks/Amethyst_furnace"
+		},
+		"better_smelters_amethyst_furnace_on": {
+			"textures": "textures/blocks/Amethyst_furnace_on"
+		},
+		"better_smelters_oak_wood_furnace_off": {
+			"textures": "textures/blocks/Oak_wood_furnace"
+		},
+		"better_smelters_oak_wood_furnace_on": {
+			"textures": "textures/blocks/Oak_wood_furnace_on"
+		},
+		"better_smelters_nether_star_furnace_off": {
+			"textures": "textures/blocks/nether_star_furnace"
+		},
+		"better_smelters_nether_star_furnace_on": {
+			"textures": "textures/blocks/nether_star_furnace_on"
+		},
+		"better_smelters_netherrack_furnace_off": {
+			"textures": "textures/blocks/netherrack_furnace"
+		},
+		"better_smelters_netherrack_furnace_on": {
+			"textures": "textures/blocks/netherrack_furnace_on"
+		}
+	}
+}

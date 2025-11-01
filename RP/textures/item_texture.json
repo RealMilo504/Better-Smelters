@@ -1,0 +1,174 @@
+{
+	"resource_pack_name": "Better Smelters",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"better_smelters_arrow_right_0": {
+			"textures": "textures/items/arrow_right_0"
+		},
+		"better_smelters_arrow_right_1": {
+			"textures": "textures/items/arrow_right_1"
+		},
+		"better_smelters_arrow_right_2": {
+			"textures": "textures/items/arrow_right_2"
+		},
+		"better_smelters_arrow_right_3": {
+			"textures": "textures/items/arrow_right_3"
+		},
+		"better_smelters_arrow_right_4": {
+			"textures": "textures/items/arrow_right_4"
+		},
+		"better_smelters_arrow_right_5": {
+			"textures": "textures/items/arrow_right_5"
+		},
+		"better_smelters_arrow_right_6": {
+			"textures": "textures/items/arrow_right_6"
+		},
+		"better_smelters_arrow_right_7": {
+			"textures": "textures/items/arrow_right_7"
+		},
+		"better_smelters_arrow_right_8": {
+			"textures": "textures/items/arrow_right_8"
+		},
+		"better_smelters_arrow_right_9": {
+			"textures": "textures/items/arrow_right_9"
+		},
+		"better_smelters_arrow_right_10": {
+			"textures": "textures/items/arrow_right_10"
+		},
+		"better_smelters_arrow_right_11": {
+			"textures": "textures/items/arrow_right_11"
+		},
+		"better_smelters_arrow_right_12": {
+			"textures": "textures/items/arrow_right_12"
+		},
+		"better_smelters_arrow_right_13": {
+			"textures": "textures/items/arrow_right_13"
+		},
+		"better_smelters_arrow_right_14": {
+			"textures": "textures/items/arrow_right_14"
+		},
+		"better_smelters_arrow_right_15": {
+			"textures": "textures/items/arrow_right_15"
+		},
+		"better_smelters_arrow_right_16": {
+			"textures": "textures/items/arrow_right_16"
+		},
+		"better_smelters_blue_flame_0": {
+			"textures": "textures/items/blue_flame_0"
+		},
+		"better_smelters_blue_flame_1": {
+			"textures": "textures/items/blue_flame_1"
+		},
+		"better_smelters_blue_flame_2": {
+			"textures": "textures/items/blue_flame_2"
+		},
+		"better_smelters_blue_flame_3": {
+			"textures": "textures/items/blue_flame_3"
+		},
+		"better_smelters_blue_flame_4": {
+			"textures": "textures/items/blue_flame_4"
+		},
+		"better_smelters_blue_flame_5": {
+			"textures": "textures/items/blue_flame_5"
+		},
+		"better_smelters_blue_flame_6": {
+			"textures": "textures/items/blue_flame_6"
+		},
+		"better_smelters_blue_flame_7": {
+			"textures": "textures/items/blue_flame_7"
+		},
+		"better_smelters_blue_flame_8": {
+			"textures": "textures/items/blue_flame_8"
+		},
+		"better_smelters_blue_flame_9": {
+			"textures": "textures/items/blue_flame_9"
+		},
+		"better_smelters_blue_flame_10": {
+			"textures": "textures/items/blue_flame_10"
+		},
+		"better_smelters_blue_flame_11": {
+			"textures": "textures/items/blue_flame_11"
+		},
+		"better_smelters_blue_flame_12": {
+			"textures": "textures/items/blue_flame_12"
+		},
+		"better_smelters_blue_flame_13": {
+			"textures": "textures/items/blue_flame_13"
+		},
+		"better_smelters_flame_0": {
+			"textures": "textures/items/flame_0"
+		},
+		"better_smelters_flame_1": {
+			"textures": "textures/items/flame_1"
+		},
+		"better_smelters_flame_2": {
+			"textures": "textures/items/flame_2"
+		},
+		"better_smelters_flame_3": {
+			"textures": "textures/items/flame_3"
+		},
+		"better_smelters_flame_4": {
+			"textures": "textures/items/flame_4"
+		},
+		"better_smelters_flame_5": {
+			"textures": "textures/items/flame_5"
+		},
+		"better_smelters_flame_6": {
+			"textures": "textures/items/flame_6"
+		},
+		"better_smelters_flame_7": {
+			"textures": "textures/items/flame_7"
+		},
+		"better_smelters_flame_8": {
+			"textures": "textures/items/flame_8"
+		},
+		"better_smelters_flame_9": {
+			"textures": "textures/items/flame_9"
+		},
+		"better_smelters_flame_10": {
+			"textures": "textures/items/flame_10"
+		},
+		"better_smelters_flame_11": {
+			"textures": "textures/items/flame_11"
+		},
+		"better_smelters_flame_12": {
+			"textures": "textures/items/flame_12"
+		},
+		"better_smelters_flame_13": {
+			"textures": "textures/items/flame_13"
+		},
+		"better_smelters_upgrade_to_copper": {
+			"textures": "textures/items/upgrade_copper"
+		},
+		"better_smelters_upgrade_to_iron": {
+			"textures": "textures/items/upgrade_iron"
+		},
+		"better_smelters_iron_upgrade_to_gold": {
+			"textures": "textures/items/iron_gold_upgrade"
+		},
+		"better_smelters_gold_upgrade_to_diamond": {
+			"textures": "textures/items/gold_diamond_upgrade"
+		},
+		"better_smelters_emerald_upgrade_to_diamond": {
+			"textures": "textures/items/emerald_diamond_upgrade"
+		},
+		"better_smelters_gold_upgrade_to_emerald": {
+			"textures": "textures/items/gold_emerald_upgrade"
+		},
+		"better_smelters_emerald_upgrade_to_amethyst": {
+			"textures": "textures/items/emerald_amethyst_upgrade"
+		},
+		"better_smelters_diamond_upgrade_to_netherite": {
+			"textures": "textures/items/diamond_netherite_upgrade"
+		},
+		"better_smelters_amethyst_upgrade_to_netherite": {
+			"textures": "textures/items/amethyst_netherite_upgrade"
+		},
+		"better_smelters_netherite_upgrade_to_blazing": {
+			"textures": "textures/items/netherite_blazing_upgrade"
+		},
+		"better_smelters_copper_upgrade_to_iron": {
+			"textures": "textures/items/copper_iron_upgrade"
+		}
+	}
+}

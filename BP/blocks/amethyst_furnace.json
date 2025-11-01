@@ -1,0 +1,116 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "better_smelters:amethyst_furnace",
+			"menu_category": {
+				"category": "construction"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					],
+					"y_rotation_offset": 180
+				}
+			},
+			"states": {
+				"better_smelters:on": [
+					false,
+					true
+				],
+				"twm:refreshSpeed": [
+					1,
+					5,
+					10,
+					20,
+					40
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.better_smelters_basic",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "better_smelters_amethyst_furnace_off",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					5,
+					5
+				]
+			},
+			"minecraft:custom_components": [
+				"better_smelters:furnace"
+			],
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": false
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							-90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('better_smelters:on') == true ",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "better_smelters_amethyst_furnace_on",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:light_emission": 8
+				}
+			}
+		]
+	}
+}

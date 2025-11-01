@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Dorios Studios"
+		]
+	},
+	"header": {
+		"name": "Better Smelters",
+		"description": "1.2.3 §6Dorios Studios",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "be207038-b363-47c0-af9f-f400e928db8a",
+		"version": [
+			1,
+			2,
+			3
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "2e473fb1-b451-4ea2-8da7-992c908391d7",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "3c4d1777-6e8b-4cbe-a2fc-b8ef2e351f9d",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "ui_defs": [
+        "ui/furnace.json",
+        "ui/floating_slot.json"
+    ]
+}

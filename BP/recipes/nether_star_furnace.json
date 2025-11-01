@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "better_smelters:nether_star_furnace"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"M": {
+				"item": "nether_star"
+			},
+			"F": {
+				"item": "better_smelters:blazing_furnace"
+			}
+		},
+		"pattern": [
+			" M ",
+			"MFM",
+			" M "
+		],
+		"result": {
+			"item": "better_smelters:nether_star_furnace"
+		},
+		"unlock": [
+			{
+				"item": "nether_star"
+			},
+			{
+				"item": "furnace"
+			}
+		]
+	}
+}
