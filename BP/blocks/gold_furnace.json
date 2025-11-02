@@ -18,17 +18,14 @@
 				"better_smelters:on": [
 					false,
 					true
-				],
-				"twm:refreshSpeed": [
-					1,
-					5,
-					10,
-					20,
-					40
 				]
 			}
 		},
 		"components": {
+			"better_smelters:furnace": {
+				"speed": 3,
+				"efficiency": 0.8
+			},
 			"minecraft:geometry": "geometry.better_smelters_basic",
 			"minecraft:material_instances": {
 				"*": {
@@ -42,9 +39,6 @@
 					5
 				]
 			},
-			"minecraft:custom_components": [
-				"better_smelters:furnace"
-			],
 			"minecraft:destructible_by_mining": {
 				"seconds_to_destroy": 1
 			},

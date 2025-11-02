@@ -1,5 +1,19 @@
 item.spawn_egg.entity.better_smelters:furnace.name=Spawn Furnace Entity
-entity.better_smelters:furnace.name=Furnace Entity
+
+entity.better_smelters:furnace.name=Furnace
+
+entity.better_smelters:oak_wood.name=Oak Wood Furnace
+entity.better_smelters:netherrack.name=§metroNetherrack Furnace
+entity.better_smelters:copper.name=§nCopper Furnace
+entity.better_smelters:iron.name=Iron Furnace
+entity.better_smelters:gold.name=§pGold Furnace
+entity.better_smelters:emerald.name=§qEmerald Furnace
+entity.better_smelters:diamond.name=§sDiamond Furnace
+entity.better_smelters:amethyst.name=§uAmethyst Furnace
+entity.better_smelters:netherite.name=§jNetherite Furnace
+entity.better_smelters:blazing.name=§6Blazing Furnace
+entity.better_smelters:nether_star.name=§eNether Star Furnace
+
 
 tile.better_smelters:oak_wood_furnace.name=Oak Wood Furnace
 tile.better_smelters:copper_furnace.name=Copper Furnace

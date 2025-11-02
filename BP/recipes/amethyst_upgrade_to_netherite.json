@@ -1,0 +1,38 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:amethyst_upgrade_to_netherite"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:netherite_scrap"
+            },
+            "B": {
+                "item": "minecraft:netherite_ingot"
+            },
+            "F": {
+                "item": "better_smelters:emerald_upgrade_to_amethyst"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "MFM",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:amethyst_upgrade_to_netherite"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:netherite_scrap"
+            },
+            {
+                "item": "better_smelters:emerald_upgrade_to_amethyst"
+            }
+        ]
+    }
+}

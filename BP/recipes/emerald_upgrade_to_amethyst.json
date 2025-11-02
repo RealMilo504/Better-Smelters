@@ -1,0 +1,38 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:emerald_upgrade_to_amethyst"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:amethyst_shard"
+            },
+            "B": {
+                "item": "minecraft:amethyst_block"
+            },
+            "F": {
+                "item": "better_smelters:gold_upgrade_to_emerald"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "MFM",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:emerald_upgrade_to_amethyst"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:amethyst_shard"
+            },
+            {
+                "item": "better_smelters:gold_upgrade_to_emerald"
+            }
+        ]
+    }
+}

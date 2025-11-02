@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:upgrade_to_copper"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:copper_ingot"
+            },
+            "B": {
+                "item": "minecraft:copper_block"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "M M",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:upgrade_to_copper"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:copper_ingot"
+            },
+            {
+                "item": "minecraft:furnace"
+            }
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:iron_upgrade_to_gold"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:gold_ingot"
+            },
+            "B": {
+                "item": "minecraft:gold_block"
+            },
+            "F": {
+                "item": "better_smelters:copper_upgrade_to_iron"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "MFM",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:iron_upgrade_to_gold"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:gold_ingot"
+            },
+            {
+                "item": "better_smelters:copper_upgrade_to_iron"
+            }
+        ]
+    }
+}

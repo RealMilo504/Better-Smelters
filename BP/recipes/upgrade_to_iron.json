@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:upgrade_to_iron"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:iron_ingot"
+            },
+            "B": {
+                "item": "minecraft:iron_block"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "M M",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:upgrade_to_iron"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:iron_ingot"
+            },
+            {
+                "item": "minecraft:furnace"
+            }
+        ]
+    }
+}

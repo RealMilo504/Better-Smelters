@@ -1,0 +1,38 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "better_smelters:emerald_upgrade_to_diamond"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "key": {
+            "M": {
+                "item": "minecraft:diamond"
+            },
+            "B": {
+                "item": "minecraft:diamond_block"
+            },
+            "F": {
+                "item": "better_smelters:gold_upgrade_to_emerald"
+            }
+        },
+        "pattern": [
+            "MMM",
+            "MFM",
+            "MBM"
+        ],
+        "result": {
+            "item": "better_smelters:emerald_upgrade_to_diamond"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:diamond"
+            },
+            {
+                "item": "better_smelters:gold_upgrade_to_emerald"
+            }
+        ]
+    }
+}

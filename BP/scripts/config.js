@@ -1,25 +1,6 @@
+import { system } from "@minecraft/server";
 
-
-// baseSpeed 1 means 1 item every 10 seconds
-// cost 100 is the normal one
-const baseSettings = { baseCost: 100, baseSpeed: 1 }
-
-// Efficiency as percentage decimal, 0.5 means it uses half of a normal furnace
-const furnacesSettings = {
-    'better_smelters:oak_wood_furnace': { efficiency: 1, speed: 1 },
-    'better_smelters:copper_furnace': { efficiency: 1, speed: 1.5 },
-    'better_smelters:iron_furnace': { efficiency: 1, speed: 2 },
-    'better_smelters:netherrack_furnace': { efficiency: 0.0001, speed: 2 },
-    'better_smelters:gold_furnace': { efficiency: 0.8, speed: 3 },
-    'better_smelters:emerald_furnace': { efficiency: 0.6, speed: 5 },
-    'better_smelters:diamond_furnace': { efficiency: 0.4, speed: 10 },
-    'better_smelters:amethyst_furnace': { efficiency: 0.4, speed: 15 },
-    'better_smelters:netherite_furnace': { efficiency: 0.2, speed: 20 },
-    'better_smelters:blazing_furnace': { efficiency: 0.1, speed: 25 },
-    'better_smelters:nether_star_furnace': { efficiency: 0.01, speed: 10 }
-}
-
-const upgrades = {
+export const upgrades = {
     'better_smelters:upgrade_to_iron': {
         initialF: 'minecraft:furnace', nextF: 'better_smelters:iron_furnace'
     },
@@ -52,84 +33,61 @@ const upgrades = {
     }
 }
 
-// fuel means how many items does it smelts
-const fuels = [
-    { id: 'compressed_coal_block', fuel: 800 },
-    { id: 'coal_block', fuel: 80 },
-    { id: 'coal', fuel: 8 },
-    { id: 'charcoal', fuel: 8 },
-    { id: 'plank', fuel: 1.5 },
-    { id: 'stair', fuel: 1.5 },
-    { id: 'fence', fuel: 1.5 },
-    { id: 'stick', fuel: 0.5 },
-    { id: 'door', fuel: 1 },
-    { id: 'ladder', fuel: 0.75 },
-    { id: 'scaffolding', fuel: 0.25 },
-    { id: 'log', fuel: 1.5 },
-    { id: '_wood', fuel: 1.5 },
-    { id: 'stem', fuel: 1.5 },
-    { id: 'hyphae', fuel: 1.5 },
-    { id: 'sapling', fuel: 0.5 },
-    { id: 'dried_kelp_block', fuel: 20 },
-    { id: 'twm:lava_ball', fuel: 100 },
-    { id: 'blaze_rod', fuel: 12 },
-    { id: 'boat', fuel: 6 },
-    { id: 'button', fuel: 0.5 },
-    { id: 'wooden', fuel: 1 },
-    { id: 'banner', fuel: 1.5 },
-    { id: 'chest', fuel: 3 },
-    { id: 'minecraft:bamboo', fuel: 0.5 },
-    { id: 'minecraft:lava_bucket', transformToItem: 'minecraft:bucket', fuel: 100 },
-    { id: 'cloud_iron_coals:iron_coal', fuel: 120 },
-    { id: 'cloud_iron_coals:gold_coal', fuel: 240 },
-    { id: 'cloud_iron_coals:diamond_coal', fuel: 480 },
-    { id: 'cloud_iron_coals:emerald_coal', fuel: 960 },
-    { id: 'cloud_iron_coals:netherite_coal', fuel: 7680 },
-    { id: 'cloud_iron_coals:aeon_coal', fuel: 99999999 },
-    { id: 'cloud_iron_coals:iron_coal_chunk', fuel: 15 },
-    { id: 'cloud_iron_coals:gold_coal_chunk', fuel: 30 },
-    { id: 'cloud_iron_coals:diamond_coal_chunk', fuel: 60 },
-    { id: 'cloud_iron_coals:emerald_coal_chunk', fuel: 120 },
-    { id: 'iron_furnaces:rainbow_coal', fuel: 80 },
-    { id: 'project_emc:mobius_fuel', fuel: 1600 },
-    { id: 'project_emc:aeternalis_fuel', fuel: 6500 },
-    { id: 'project_emc:alchemical_coal', fuel: 410 }
-];
+export const baseSettings = { baseCost: 100, baseSpeed: 1 }
 
-const smeltableItems = {
+/**
+ * Recipes for the Incinerator machine.
+ *
+ * Each key represents an input item identifier, and its value specifies
+ * the resulting output item, required input quantity, and output amount.
+ *
+ * @constant
+ * @type {SingleInputRecipes}
+ */
+export const furnaceRecipes = {
     // UtilityCraft
-    "twm:raw_steel": {
-        output: "twm:steel_ingot"
+    "utilitycraft:raw_steel": {
+        output: "utilitycraft:steel_ingot"
     },
-    "twm:raw_energized_iron": {
-        output: "twm:energized_iron_ingot"
+    "utilitycraft:raw_energized_iron": {
+        output: "utilitycraft:energized_iron_ingot"
     },
-    "twm:iron_dust": {
+    "utilitycraft:iron_dust": {
         output: "minecraft:iron_ingot"
     },
-    "twm:copper_dust": {
+    "utilitycraft:copper_dust": {
         output: "minecraft:copper_ingot"
     },
-    "twm:gold_dust": {
+    "utilitycraft:gold_dust": {
         output: "minecraft:gold_ingot"
     },
-    "twm:netherite_dust": {
+    "utilitycraft:netherite_dust": {
         output: "minecraft:netherite_ingot"
     },
-    "twm:steel_dust": {
-        output: "twm:steel_ingot"
+    "utilitycraft:netherite_scrap_dust": {
+        output: "minecraft:netherite_scrap"
     },
-    "twm:energized_iron_dust": {
-        output: "twm:energized_iron_ingot"
+    "utilitycraft:steel_dust": {
+        output: "utilitycraft:steel_ingot"
     },
-    "twm:raw_steel_block": {
-        output: "twm:steel_block"
+    "utilitycraft:energized_iron_dust": {
+        output: "utilitycraft:energized_iron_ingot"
     },
-    "twm:raw_energized_iron_block": {
-        output: "twm:energized_iron_block"
+    "utilitycraft:raw_steel_block": {
+        output: "utilitycraft:steel_block"
     },
-    "twm:raw_leather": {
+    "utilitycraft:raw_energized_iron_block": {
+        output: "utilitycraft:energized_iron_block"
+    },
+    "utilitycraft:raw_leather": {
         output: "minecraft:leather"
+    },
+    'utilitycraft:crushed_kelp': {
+        output: "minecraft:slime_ball"
+    },
+    // Compressed    
+    "utilitycraft:compressed_sand": {
+        output: "utilitycraft:compressed_glass"
     },
     // Utility Useful Recipes
     "minecraft:raw_iron_block": {
@@ -140,6 +98,10 @@ const smeltableItems = {
     },
     "minecraft:raw_copper_block": {
         output: "minecraft:copper_block"
+    },
+    // IS
+    "ae2be:certus_quartz_dust": {
+        output: "ae2be:silicon"
     },
     // Minecraft Vanilla
     "minecraft:porkchop": {
@@ -564,6 +526,206 @@ const smeltableItems = {
     },
 }
 
-export { smeltableItems, baseSettings, furnacesSettings, fuels, upgrades }
+/**
+ * ScriptEvent receiver: "utilitycraft:register_furnace_recipe"
+ *
+ * Allows other addons or scripts to dynamically add or replace furnace recipes.
+ * If the item already exists in `furnaceRecipes`, it will be replaced.
+ *
+ * Expected payload format (JSON):
+ * ```json
+ * {
+ *   "minecraft:stone": { "output": "minecraft:smooth_stone" },
+ *   "minecraft:rotten_flesh": { "output": "strat:coagulated_blood" }
+ * }
+ * ```
+ *
+ * Behavior:
+ * - New items are created automatically if missing.
+ * - Existing items are replaced and logged individually.
+ * - Only a summary log is printed when finished.
+ */
+system.afterEvents.scriptEventReceive.subscribe(({ id, message }) => {
+    if (id !== "utilitycraft:register_furnace_recipe") return;
+
+    try {
+        const payload = JSON.parse(message);
+        if (!payload || typeof payload !== "object") return;
+
+        let added = 0;
+        let replaced = 0;
+
+        for (const [inputId, data] of Object.entries(payload)) {
+            if (!data.output || typeof data.output !== "string") continue;
+
+            if (furnaceRecipes[inputId]) {
+                console.warn(`[UtilityCraft] Replaced existing furnace recipe for '${inputId}'.`);
+                replaced++;
+            } else {
+                added++;
+            }
+
+            // Directly assign; machine will handle defaults
+            furnaceRecipes[inputId] = data;
+        }
+
+        console.warn(`[UtilityCraft] Registered ${added} new and replaced ${replaced} furnace recipes.`);
+    } catch (err) {
+        console.warn("[UtilityCraft] Failed to parse furnace registration payload:", err);
+    }
+});
+
+// ==================================================
+// EXAMPLES – How to register custom furnace recipes
+// ==================================================
+/*
+import { system, world } from "@minecraft/server";
+
+world.afterEvents.worldLoad.subscribe(() => {
+    // Add or replace furnace recipes dynamically
+    const newRecipes = {
+        "minecraft:stone": { output: "minecraft:smooth_stone" },
+        "minecraft:rotten_flesh": { output: "strat:coagulated_blood" },
+        // This one replaces an existing recipe
+        "minecraft:cobblestone": { output: "minecraft:deepslate" }
+    };
+
+    // Send the event to the furnace script
+    system.sendScriptEvent("utilitycraft:register_furnace_recipe", JSON.stringify(newRecipes));
+
+    console.warn("[Addon] Custom furnace recipes registered via system event.");
+});
+
+// You can also do this directly with a command inside Minecraft:
+Command:
+/scriptevent utilitycraft:register_furnace_recipe {"minecraft:stone":{"output":"minecraft:smooth_stone"},"minecraft:cobblestone":{"output":"minecraft:deepslate"}}
+*/
 
 
+/**
+ * Represents a solid fuel entry for the Furnator.
+ *
+ * @typedef {Object} SolidFuel
+ * @property {string} id  The item identifier or keyword (e.g. "coal", "plank").
+ * @property {number} de  Dorios Energy (DE) produced when consumed.
+ */
+
+/**
+ * Solid fuels used by the Furnator generator.
+ * Each entry defines the item ID (or pattern) and the energy produced (in DE).
+ *
+ * @constant
+ * @type {SolidFuel[]}
+ */
+export const solidFuels = [
+    { id: "compressed_charcoal_block_2", value: 8000000 },
+    { id: "compressed_charcoal_block_3", value: 80000000 },
+    { id: "compressed_charcoal_block_4", value: 800000000 },
+    { id: "compressed_charcoal_block", value: 800000 },
+    { id: "charcoal_block", value: 80000 },
+    { id: "charcoal", value: 8000 },
+    { id: "compressed_coal_block_3", value: 80000000 },
+    { id: "compressed_coal_block_2", value: 8000000 },
+    { id: "compressed_coal_block_4", value: 800000000 },
+    { id: "compressed_coal_block", value: 800000 },
+    { id: "coal_block", value: 80000 },
+    { id: "coal", value: 8000 },
+    { id: "plank", value: 1500 },
+    { id: "stair", value: 1500 },
+    { id: "fence", value: 1500 },
+    { id: "stick", value: 500 },
+    { id: "door", value: 1000 },
+    { id: "ladder", value: 750 },
+    { id: "scaffolding", value: 250 },
+    { id: "log", value: 1500 },
+    { id: "_wood", value: 1500 },
+    { id: "stem", value: 1500 },
+    { id: "hyphae", value: 1500 },
+    { id: "sapling", value: 500 },
+    { id: "dried_kelp_block", value: 20000 },
+    { id: "lava_ball", value: 100000 },
+    { id: "bundle_of_blaze_rods", value: 108000 },
+    { id: "blaze_rod", value: 12000 },
+    { id: "boat", value: 6000 },
+    { id: "button", value: 500 },
+    { id: "wooden", value: 1000 },
+    { id: "banner", value: 1500 },
+    { id: "chest", value: 3000 },
+    { id: "leaves", value: 500 },
+    { id: 'minecraft:lava_bucket', transformToItem: 'minecraft:bucket', value: 100 },
+];
+
+/**
+ * ScriptEvent receiver: "utilitycraft:register_fuel"
+ *
+ * Allows other addons or scripts to dynamically add or replace solid fuels.
+ * If a fuel with the same ID already exists, it will be replaced.
+ *
+ * Expected payload format (JSON):
+ * ```json
+ * {
+ *   "custom_fuel_1": 50000,
+ *   "minecraft:apple": 1000
+ * }
+ * ```
+ *
+ * Behavior:
+ * - New fuels are added automatically if missing.
+ * - Existing fuels are replaced and logged individually.
+ * - Only a summary log is printed when finished.
+ */
+system.afterEvents.scriptEventReceive.subscribe(({ id, message }) => {
+    if (id !== "utilitycraft:register_fuel") return;
+
+    try {
+        const payload = JSON.parse(message);
+        if (!payload || typeof payload !== "object") return;
+
+        let added = 0;
+        let replaced = 0;
+
+        for (const [fuelId, de] of Object.entries(payload)) {
+            if (typeof de !== "number") continue;
+
+            const existing = solidFuels.find(f => f.id === fuelId);
+            if (existing) {
+                existing.de = de;
+                console.warn(`[UtilityCraft] Replaced existing fuel '${fuelId}' with ${de} DE.`);
+                replaced++;
+            } else {
+                solidFuels.push({ id: fuelId, de });
+                added++;
+            }
+        }
+
+        console.warn(`[UtilityCraft] Registered ${added} new and replaced ${replaced} fuels.`);
+    } catch (err) {
+        console.warn("[UtilityCraft] Failed to parse fuel registration payload:", err);
+    }
+});
+
+// ==================================================
+// EXAMPLES – How to register custom Furnator fuels
+// ==================================================
+/*
+import { system, world } from "@minecraft/server";
+
+world.afterEvents.worldLoad.subscribe(() => {
+    // Add or replace solid fuels dynamically
+    const newFuels = {
+        "utilitycraft:bio_fuel": 12000,
+        "minecraft:bamboo_block": 4000,
+        // This one replaces an existing entry
+        "minecraft:coal": 10000
+    };
+
+    // Send the event to the Furnator script
+    system.sendScriptEvent("utilitycraft:register_fuel", JSON.stringify(newFuels));
+
+    console.warn("[Addon] Custom Furnator fuels registered via system event.");
+});
+
+// You can also do this directly with a command inside Minecraft:
+Command:
+/scriptevent utilitycraft:register_fuel {"utilitycraft:bio_fuel":12000,"minecraft:coal":10000}
+*/
