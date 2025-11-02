@@ -173,13 +173,13 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
                 if (inv.getItem(4)) block.dimension.spawnItem(inv.getItem(4), { x, y, z })
                 ent.remove()
             });
-        }
+        },
+        onPlayerInteract() { }
     })
 })
 
 world.afterEvents.playerInteractWithBlock.subscribe(e => {
     const { block, itemStack } = e
-
     if (!itemStack) return
     if (!block.typeId.includes('furnace')) return
     const upgrade = upgrades[itemStack.typeId]
@@ -196,9 +196,9 @@ world.afterEvents.playerInteractWithBlock.subscribe(e => {
 
         const entity = block.dimension.spawnEntity('better_smelters:furnace', { x, y, z })
         const inv = entity.getComponent('minecraft:inventory')?.container;
-        entity.nameTag = 'Better Smelters'
+        const tier = upgrade.nextF.split(':')[1].split('_furnace')[0]
+        entity.nameTag = `entity.better_smelters:${tier}.name`
 
-        entity.addTag('twm_container')
         inv.setItem(0, new ItemStack('better_smelters:flame_0', 1))
         inv.setItem(1, new ItemStack('better_smelters:arrow_right_0', 1))
         furnace.moveItem(1, 2, inv)
